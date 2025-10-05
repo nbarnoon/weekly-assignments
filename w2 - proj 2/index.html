@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Example</title>
+        <style>
+
+            body{
+                background-color: rgb(32, 34, 34);
+                color: rgb(218, 216, 216);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-align: center;
+                padding: 20px;
+               /* max-width: 600px; */
+
+            }
+
+            /* 
+            .flyer-container {
+                border: 4px solid rgb(224, 224, 224);
+                padding: 20px;
+                margin: 20px auto;
+                max-width: 700px;
+                background-color: rgb(32, 34, 34);
+                color: rgb(218, 216, 216);
+            }
+            */
+            
+            header{
+                margin: 20px 0;
+            }
+
+            footer {
+                margin: 20px 0;            
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+           
+
+            .shapes {
+                position: relative; /* allowing childern inside */ 
+                width: 300px;
+                height: 300px;
+                margin: 0 auto;
+            }
+
+            .big-circle {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                background-color: rgb(189, 36, 36);
+            }
+
+            .small-circle {
+                position: absolute;
+                left: 20px;
+                top: 20px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: rgb(244, 238, 114);
+            }
+
+            .bar {
+                position: absolute;
+                bottom: 50px;
+                left: 50%;
+                width: 160px;
+                height: 25px;
+                transform: translateX(-50%);
+                border-radius: 12px;
+                background-color: rgb(6, 72, 170);
+
+            }
+
+            /* CTA container */
+            .cta {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin: 20px 0;
+            }
+
+            /* pill button */
+            .btn {
+                padding: 8px 16px;
+                border-radius: 999px;
+                background-color: rgb(42, 156, 127);
+                color: beige;
+                border: 1px solid rgb(37, 131, 107);
+                text-decoration: none;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+
+           
+
+            /* tablet */
+            @media (min-width: 600px) and (max-width: 999px) {
+                body {
+                    background-color: rgb(29, 31, 42);
+                    color:rgb(229, 223, 223);
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+                    text-align: left;
+                    padding: 30px;
+                }
+                
+
+                header, footer {
+                    text-align: left;
+                }
+
+                p {
+                    font-size: 1.25rem;
+                }
+
+                /*
+                .flyer-container {
+                    border: 4px solid rgb(224, 224, 224);
+                    padding: 20px;
+                }
+                */
+
+                .shapes {
+                    width: 360px;
+                    height: 320px;
+                }
+
+                .big-circle {
+                    width: 200px;
+                    height: 200px;
+                    background-color: rgb(38, 126, 242);
+                }
+
+                .small-circle {
+                    width: 70px;
+                    height: 70px;
+                    background-color: rgb(233, 146, 58);
+                    left: 50%;
+                    top: 50%;
+                }
+
+                .bar {
+                    width: 200px;
+                    height: 22px;
+                    background-color: rgb(142, 37, 37);
+                    bottom: 70px;
+                    transform: translateX(-50%) rotate(8deg);
+                }
+                .cta {
+                    justify-content: flex-start;
+                }
+
+                footer p {
+                    font-size: 0.9rem;
+                    font-family:Verdana, Geneva, Tahoma, sans-serif;
+                    letter-spacing: 1px;
+                    color:rgb(162, 194, 201)
+                }
+            }
+
+            /* desktop */
+            @media (min-width: 1000px) {
+                body {
+                    background-color: rgb(17, 32, 32);
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    color:rgb(187, 182, 169); 
+                    text-align: center;
+                }
+
+                header{
+                margin: 60px 0;
+                }
+
+                h1 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+                /*
+                .flyer-container {
+                    border: 4px solid rgb(224, 224, 224);
+                    padding: 20px;
+                } 
+                */
+
+
+                .shapes {
+                    width: 500px;
+                    height: 500px;
+                }
+                
+                .big-circle {
+                    width: 300px;
+                    height: 300px;
+                    left: 50%;
+                    top: 50%;
+                    background-color: rgb(56, 141, 194);
+                    transform: translate(-50%, -50%);
+                }
+                
+                .small-circle {
+                    width: 120px;
+                    height: 120px;
+                    left: 50%;
+                    top: 50%;
+                    background-color: rgb(244, 153, 73);
+
+                }
+
+                .bar {
+                    width: 260px;
+                    height: 35px;
+                    background-color: rgb(142, 37, 37);
+                }
+
+                .triangle {
+                    width: 0px;
+                    height: 0px;
+                    border-left: 130px solid transparent;
+                    border-right: 130px solid transparent;
+                    border-bottom: 130px solid rgb(137, 108, 165);
+                    /* background-color: rgb(137, 108, 165);
+                    left: 22%;
+                    top: 10%;*/
+                    position: absolute;
+                    left: 22%;
+                    top:8%;
+                    transform: rotate(15deg);
+                }
+
+                .square {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 4px;
+                    background-color: rgb(137, 200, 140);
+                    position: absolute;
+                    right: 8%;
+                    bottom: 10%;
+                   
+                  /*  transform: rotate(10deg); */
+                }
+
+                .cta {
+                    justify-content: center;
+                    max-width: 500px;
+                    margin-inline: auto;
+                    width: 100%;
+                }
+
+                .btn {
+                    padding: 12px 24px;
+                    font-size: 1.2rem;
+                }
+
+                footer p {
+                    font-size: 1.2rem;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    letter-spacing: 1px;
+                    color:rgb(187, 168, 122);
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+       <!-- <div class="flyer-container"></div> -->
+        <header>
+             <h1>Interactive Flyer</h1>
+              <p>Same content, different look!</p>
+        </header>
+       
+        <main>
+            <section class="shapes">
+                <div class="big-circle"></div>
+                <div class="small-circle"></div>
+                <div class="bar"></div>
+
+                <!-- only on desktop-->
+                 <div class="triangle"></div>
+                 <div class="square"></div>
+
+            </section>
+        </main>
+        <footer>
+            <p> 2025 Flyer of the day - Connect to showcase your flyer</p>
+
+            <div class="cta">
+                <a class="btn" href="mailto:you@hello.com">Connect</a>
+            
+            </div>
+        </footer>
+    </body>
+    </html>
+
