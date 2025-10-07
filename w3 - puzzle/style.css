@@ -1,0 +1,60 @@
+
+#puzzleStage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 0px;
+    width: 540px;
+    margin: 0 auto;
+    line-height: 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,.15);
+    overflow: hidden;
+}
+
+#puzzleStage img {
+
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+#statusText {
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(206, 55, 143)
+}
+
+
+body {
+  font-family: system-ui, sans-serif;
+  padding: 24px;
+  background: #e7e7ec;
+  color: #111;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  width: 360px;
+  margin-top: 12px;
+}
+
+.board img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
